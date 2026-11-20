@@ -211,7 +211,6 @@ main a:not(.btn):not(.btn-ghost):active {
     margin-bottom: 30px;
 }
 
-
 .portfolio .portfolio-filters {
     gap: 15px;
     margin-bottom: 45px;
@@ -230,4 +229,45 @@ main a:not(.btn):not(.btn-ghost):active {
 
 .portfolio .portfolio-card:hover {
     box-shadow: 0 12px 35px rgba(19, 135, 193, 0.25);
+}
+
+.header {
+    background-color: rgba(20, 31, 38, 0.95);
+    border-bottom: 2px solid #1387c1;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+}
+
+.navmenu a {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.navmenu a:hover {
+    color: #75ccff;
+}
+
+.navmenu .active {
+    color: #75ccff;
+}
+
+.skills .skill-box .progress,
+.resume .skill-item .progress {
+    height: 14px;
+    background-color: #325264;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.skills .skill-box .progress-bar,
+.resume .skill-item .progress-bar {
+    background: linear-gradient(90deg, #1387c1, #6255c7);
+    border-radius: 20px;
+    height: 100%;
+}
+
+.resume .skill-item .progress-bar::after {
+    color: #75ccff;
 }
