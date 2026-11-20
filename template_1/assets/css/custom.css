@@ -1,0 +1,166 @@
+
+
+:root {
+    --default-font: "Trebuchet MS", Arial, sans-serif;
+    --heading-font: Georgia, "Times New Roman", serif;
+    --nav-font: "Trebuchet MS", Arial, sans-serif;
+}
+
+
+body {
+    font-family: var(--default-font);
+    font-size: 16px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
+h1 {
+    font-size: 42px;
+    color: #75ccff;
+}
+
+h2 {
+    font-size: 34px;
+    color: #75ccff;
+}
+
+h3 {
+    font-size: 26px;
+    color: #f5faff;
+}
+
+h4, h5, h6 {
+    font-size: 20px;
+    color: #e7f2f7;
+}
+
+
+p {
+    font-family: var(--default-font);
+    font-size: 17px;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+    color: var(--default-color);
+}
+
+
+.navmenu a,
+.navmenu a:focus {
+    font-family: var(--nav-font);
+    font-weight: 600;
+}
+
+
+.page-title .heading h1 {
+    font-family: var(--heading-font);
+    font-size: 42px;
+    font-weight: 700;
+    color: #75ccff;
+}
+
+
+.section-title h2 {
+    font-family: var(--heading-font);
+    font-size: 42px;
+    font-weight: 700;
+    color: #75ccff;
+    letter-spacing: 0.5px;
+}
+
+
+.about .intro-content .headline {
+    font-family: var(--heading-font);
+    font-weight: 700;
+}
+
+.about .intro-content p,
+.about .intro-content .lead {
+    font-family: var(--default-font);
+    font-size: 17px;
+}
+
+
+.services .service-content h3 {
+    font-family: var(--heading-font);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.services .service-content p {
+    font-family: var(--default-font);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+@media (max-width: 768px) {
+    .page-title .heading h1,
+    .section-title h2 {
+        font-size: 32px;
+    }
+}
+
+.hero .hero-actions .btn.btn-primary,
+.hero .hero-actions .btn.btn-outline,
+.about .intro-content .cta-group .btn-ghost,
+button[type="submit"] {
+    background: linear-gradient(135deg, #1387c1, #6255c7);
+    color: #ffffff;
+    border: 2px solid #75ccff;
+    border-radius: 12px;
+    padding: 12px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.hero .hero-actions .btn.btn-primary:hover,
+.hero .hero-actions .btn.btn-outline:hover,
+.about .intro-content .cta-group .btn-ghost:hover,
+button[type="submit"]:hover {
+    background: #6255c7;
+    color: #ffffff;
+    border-color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(98, 85, 199, 0.4);
+}
+
+.hero .hero-actions .btn.btn-primary:active,
+.hero .hero-actions .btn.btn-outline:active,
+.about .intro-content .cta-group .btn-ghost:active,
+button[type="submit"]:active {
+    background: #3449a5;
+    transform: scale(0.95);
+    box-shadow: none;
+}
+
+main a:not(.btn):not(.btn-ghost) {
+    color: #75ccff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: all 0.3s ease;
+}
+
+main a:not(.btn):not(.btn-ghost):hover {
+    color: #c5a8ff;
+    text-decoration-color: #c5a8ff;
+}
+
+main a:not(.btn):not(.btn-ghost):active {
+    color: #ffffff;
+}
+
+.navmenu a:hover {
+    color: #c5a8ff;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.navmenu a:active {
+    color: #ffffff;
+}
