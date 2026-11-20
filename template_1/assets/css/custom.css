@@ -164,3 +164,70 @@ main a:not(.btn):not(.btn-ghost):active {
 .navmenu a:active {
     color: #ffffff;
 }
+
+.about .intro-content {
+    padding: 30px;
+    margin-bottom: 35px;
+    background-color: var(--surface-color);
+    border: 1px solid #325264;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.about .intro-content .headline {
+    margin-bottom: 30px;
+}
+
+.about .intro-content p {
+    margin-bottom: 20px;
+}
+
+.about .skill-item {
+    padding: 30px;
+    border: 1px solid #325264;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.resume .resume-item {
+    margin-bottom: 45px;
+    padding: 30px;
+    background-color: var(--surface-color);
+    border: 1px solid #325264;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.resume .resume-item .resume-title {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+}
+
+.resume .resume-item .resume-content {
+    padding-left: 28px;
+}
+
+.resume .resume-item article {
+    margin-bottom: 30px;
+}
+
+
+.portfolio .portfolio-filters {
+    gap: 15px;
+    margin-bottom: 45px;
+}
+
+.portfolio .portfolio-card {
+    margin-bottom: 38px;
+    border: 1px solid #325264;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio .portfolio-card .portfolio-info {
+    padding: 28px;
+}
+
+.portfolio .portfolio-card:hover {
+    box-shadow: 0 12px 35px rgba(19, 135, 193, 0.25);
+}
