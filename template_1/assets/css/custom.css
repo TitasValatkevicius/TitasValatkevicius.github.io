@@ -233,23 +233,10 @@ main a:not(.btn):not(.btn-ghost):active {
 
 .header {
     background-color: rgba(20, 31, 38, 0.95);
-    border-bottom: 2px solid #1387c1;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    border-bottom: 3px solid #1387c1;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(12px);
-}
-
-.navmenu a {
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-}
-
-.navmenu a:hover {
-    color: #75ccff;
-}
-
-.navmenu .active {
-    color: #75ccff;
+    padding: 20px 0;
 }
 
 .skills .skill-box .progress,
@@ -257,7 +244,6 @@ main a:not(.btn):not(.btn-ghost):active {
     height: 14px;
     background-color: #325264;
     border-radius: 20px;
-    overflow: hidden;
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -268,6 +254,113 @@ main a:not(.btn):not(.btn-ghost):active {
     height: 100%;
 }
 
-.resume .skill-item .progress-bar::after {
+.resume .skill-item .progress {
+    overflow: visible;
+}
+
+.lab-numbered,
+.lab-bulleted {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.lab-numbered {
+    counter-reset: step;
+}
+
+.lab-numbered > li,
+.lab-bulleted > li {
+    position: relative;
+    background-color: #182b36;
+    border: 1px solid #325264;
+    border-radius: 12px;
+    padding: 15px 20px 15px 55px;
+    margin-bottom: 12px;
+    color: #e7f2f7;
+}
+
+.lab-numbered > li {
+    counter-increment: step;
+}
+
+.lab-numbered > li::before {
+    content: counter(step) ".";
+    position: absolute;
+    left: 20px;
     color: #75ccff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.lab-bulleted > li::before {
+    content: "◆";
+    position: absolute;
+    left: 20px;
+    color: #75ccff;
+    font-size: 16px;
+}
+
+.lab-numbered ul,
+.lab-bulleted ul {
+    list-style: none;
+    background-color: #0d1e28;
+    border-left: 3px solid #75ccff;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin-top: 12px;
+}
+
+.lab-numbered ul > li,
+.lab-bulleted ul > li {
+    position: relative;
+    padding: 7px 10px 7px 25px;
+    color: #bfd7e6;
+    font-size: 15px;
+}
+
+.lab-numbered ul > li::before,
+.lab-bulleted ul > li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #75ccff;
+}
+
+.lab-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #141f26;
+    border: 1px solid #325264;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.lab-table th,
+.lab-table td {
+    padding: 14px 16px;
+    text-align: center;
+    border-bottom: 1px solid #325264;
+    color: #e7f2f7;
+}
+
+.lab-table thead th {
+    background-color: #176293;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.lab-table tbody tr:nth-child(even) {
+    background-color: #203747;
+}
+
+.lab-table tbody tr:hover {
+    background-color: #2c5066;
+    transition: background-color 0.2s ease;
+}
+
+.lab-table tbody tr:last-child td {
+    border-bottom: none;
 }
