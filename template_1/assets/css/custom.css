@@ -470,17 +470,6 @@ main a:not(.btn):not(.btn-ghost):active {
     margin-bottom: 0;
 }
 
-@media (max-width: 767px) {
-    .ld10-board {
-        grid-template-columns: 1fr;
-    }
-
-    .ld10-metrics {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 8px;
-    }
-}
-
 /* LD10: papildomos CSS animacijos */
 #services.services {
     background: linear-gradient(125deg, #141f26, #173d58, #332750, #141f26);
