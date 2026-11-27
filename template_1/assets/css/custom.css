@@ -364,3 +364,173 @@ main a:not(.btn):not(.btn-ghost):active {
 .lab-table tbody tr:last-child td {
     border-bottom: none;
 }
+
+/* LD10: kompetencijų pažanga */
+.ld10-board,
+.ld10-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.ld10-column,
+.ld10-summary {
+    padding: 20px;
+    background-color: var(--surface-color);
+    border: 1px solid #325264;
+    border-radius: 16px;
+}
+
+.ld10-column {
+    border-top: 4px solid var(--ld10-status);
+}
+
+.ld10-planned { --ld10-status: #f6cd85; }
+.ld10-learning { --ld10-status: #75ccff; }
+.ld10-done { --ld10-status: #8de3bc; }
+
+.ld10-column > h3,
+.ld10-card-meta span {
+    color: var(--ld10-status);
+}
+
+.ld10-column ul {
+    display: grid;
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ld10-card {
+    padding: 14px;
+    background-color: #141f26;
+    border: 1px solid #325264;
+    border-radius: 10px;
+}
+
+.ld10-card h4 {
+    font-size: 1.125rem;
+    overflow-wrap: anywhere;
+}
+
+.ld10-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 6px 12px;
+    font-size: .875rem;
+}
+
+.ld10-summary {
+    margin-top: 24px;
+}
+
+.ld10-metrics > div {
+    padding: 12px;
+    background-color: #141f26;
+    border-radius: 8px;
+}
+
+.ld10-metrics dd {
+    margin: 0;
+    color: #75ccff;
+    font-size: 1.125rem;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.ld10-progress {
+    display: block;
+    width: 100%;
+    height: 14px;
+    margin: 8px 0;
+    appearance: none;
+    overflow: hidden;
+    border: 0;
+    border-radius: 20px;
+    background: #325264;
+    color: #75ccff;
+    accent-color: #75ccff;
+}
+
+.ld10-progress::-webkit-progress-bar {
+    background: #325264;
+}
+
+.ld10-progress::-webkit-progress-value {
+    background: linear-gradient(90deg, #75ccff, #c5a8ff);
+}
+
+.ld10-progress::-moz-progress-bar {
+    background: linear-gradient(90deg, #75ccff, #c5a8ff);
+}
+
+.ld10-summary p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .ld10-board {
+        grid-template-columns: 1fr;
+    }
+
+    .ld10-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+}
+
+/* LD10: papildomos CSS animacijos */
+#services.services {
+    background: linear-gradient(125deg, #141f26, #173d58, #332750, #141f26);
+    background-size: 260% 260%;
+    animation: ld10-gradient 12s ease-in-out infinite alternate;
+}
+
+.ld10-shapes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 24px;
+    min-height: 48px;
+}
+
+.ld10-circle {
+    width: 28px;
+    height: 28px;
+    border: 3px solid #75ccff;
+    border-radius: 50%;
+    animation: ld10-float 3s ease-in-out infinite alternate;
+}
+
+.ld10-triangle {
+    width: 32px;
+    height: 28px;
+    background-color: #c5a8ff;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    animation: ld10-spin 8s linear infinite;
+}
+
+@keyframes ld10-gradient {
+    from { background-position: 0% 50%; }
+    to { background-position: 100% 50%; }
+}
+
+@keyframes ld10-float {
+    from { transform: translateY(-6px); }
+    to { transform: translateY(6px); }
+}
+
+@keyframes ld10-spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #services.services,
+    .ld10-circle,
+    .ld10-triangle {
+        animation: none;
+    }
+}
